@@ -3,19 +3,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int salida=1;
-        do {
-            //INGRESAR NUMEROS
+        while (salida!=0){
+            //USUARIO INGRESA NUMEROS POR TECLADO
             System.out.println("Ingrese los numeros que desea operar:");
             double n1 = sc.nextDouble();
             double n2 = sc.nextDouble();
-            //ELEGIR OPERACION
+            //MENU DE OPERACIONES
             System.out.println("Ingrese la operacion que desea realizar(1,2,3 o 4):");
             System.out.println("1.SUMA");
             System.out.println("2.RESTA");
             System.out.println("3.MULTIPLICACION");
             System.out.println("4.DIVISION");
             int operacion = sc.nextInt();
-            //OPERACIONES
+            //OPERACION A REALIZAR SEGUN LO QUE HAYA SOLICITADO EL USUARIO
             if (operacion == 1) {
                 double suma = n1 + n2;
                 System.out.println(n1 + "+" + n2 + "=" + suma);
@@ -36,9 +36,9 @@ public class Main {
                 System.out.println("La opcion ingresada no es correcta");
             }
             //INGRESAR NUEVAMENTE O SALIR DE LA CALCULADORA
-            System.out.println("DESEA REALIZAR OTRA OPERACION? SI:Ingresar 1/ NO:Ingresar 0");
+            System.out.println("DESEA REALIZAR OTRA OPERACION? SI:Ingresar cualquier numero/ NO:Ingresar 0");
             salida=sc.nextInt();
-        }while(salida==1);
+        };
         System.out.println("BYE");
     }
 }
